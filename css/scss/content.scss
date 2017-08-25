@@ -1,0 +1,206 @@
+// -------------------------------------------------------
+//                     nav
+// -------------------------------------------------------
+
+.nav-icon-container {
+  height:80px;
+  width:80px;
+  background-color:#000000;
+  opacity:.6;
+  position:fixed;
+  border-radius: 50%;
+  position:fixed;
+  z-index:0;
+  margin-left:15px;
+  margin-top:8px;
+  transition: opacity .5s ease-in-out;
+}
+
+.nav{
+  height:100px;
+  width:100%;
+  background-color:rgba(0,0,0,.6);
+  position:fixed;
+  top:-100px;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  // animation-styles
+
+
+  &__ul {
+
+    list-style-type: none;
+    color:#fff;
+    font-family:'Righteous', cursive;
+    font-size:2em;
+    cursor:pointer;
+
+    &--li-one {
+      display:inline;
+
+    }
+
+    &--li-one:hover {
+      border-bottom:2px solid white;
+    }
+
+    &--li-two {
+      display:inline;
+
+    }
+
+    &--li-two:hover {
+      border-bottom:2px solid white;
+    }
+
+    &--li-three {
+      display:inline;
+
+    }
+
+    &--li-three:hover {
+      border-bottom:2px solid white;
+    }
+  }
+  &.slide-out {
+    animation: slide-out .5s forwards ease-in-out running;
+  }
+  &.slide-in {
+    animation: slide-in .5s forwards ease-in-out running;
+  }
+}
+
+
+@keyframes slide-in {
+  0% {
+    top:-100px;
+  }
+  100% {
+    top:0px;
+  }
+}
+@keyframes slide-out {
+  0% {
+    top:0px;
+  }
+  100% {
+    top:-100px;
+  }
+}
+
+// -------------------------------------------------------
+//                      intro-logo
+// -------------------------------------------------------
+
+.logo {
+
+  &__circle {
+    position:absolute;
+    height:300px;
+    width:300px;
+    border-radius:50%;
+    font-size:32px;
+    opacity:0;
+    animation: fade-in-out 4s ease-in-out 1s forwards running;
+
+    &--h1-one {
+
+    }
+    &--h1-two {
+
+    }
+    &--h1-three {
+      font-size:20px;
+      margin-top:10px;
+    }
+  }
+}
+
+@keyframes fade-in-out {
+  0%{
+    opacity:0;
+  }
+  25%{
+    opacity:1;
+  }
+  75% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+// -------------------------------------------------------
+//                      text-container
+// -------------------------------------------------------
+.text-container{
+  height:50vh;
+  width:80vw;
+  background-color:#000000;
+  font-family:'rubber-maid', cursive;
+  color:#871010;
+  position:absolute;
+  top:50%;
+  left:50%;
+  opacity:0;
+  transform:translate(-50%, -50%);
+  animation: container-fade-in 3s ease-in 4s forwards running;
+
+  &__h1 {
+    transition: 2s ease-in-out;
+
+  }
+  &__p {
+    transition: 2s ease-in-out;
+
+  }
+}
+
+
+.centered-text {
+  color:#871010;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-size:40px;
+  font-family:'rubber-maid', cursive;
+}
+
+// inputs
+.input-container {
+  position:absolute;
+  top:85%;
+  left:50%;
+  transform:translateX(-50%);
+  opacity:0;
+  animation: container-fade-in 3s ease-in 4s forwards running;
+}
+
+.name-input {
+  background-color:#515958;
+  border-color:#000000;
+  color:#000000;
+}
+
+.submit-button {
+  margin-left:15px;
+  font-family:'rubber-maid', cursive;
+  color:#871010;
+  background-color:#000000;
+  border-color:#000000;
+}
+
+
+@keyframes container-fade-in {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
